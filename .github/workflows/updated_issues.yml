@@ -1,7 +1,7 @@
 name: Labeling new comment to issue
 on:
   issue_comment:
-    types: [created]
+    types: [created, edited]
 jobs:
   build:
     runs-on: ubuntu-latest
