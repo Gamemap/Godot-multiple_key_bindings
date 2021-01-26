@@ -1,0 +1,13 @@
+name: Labeling new comment to issue
+on:
+  issue_comment:
+    types: [created]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: Renato66/auto-label@v2 # or v2.2.0
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          labels-synonyms: '{"bug":["error","need fix","not working"],"wontfix":["no fix"],"enhancement":["upgrade"],"question":["help"]}'
+          labels-not-allowed: '["good first issue"]'
