@@ -11,7 +11,6 @@ jobs:
       - uses: Renato66/auto-label@v2 # or v2.2.0
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
-          ignore-comments: false
-          labels-synonyms: '{"bug":["error","need fix","not working"],"enhancement":["upgrade"],"question":["help"]}'
+          labels-synonyms: '{"bug":["error","need fix","not working"],"wontfix":["no fix"],"enhancement":["upgrade"],"question":["help"]}'
           labels-not-allowed: '["good first issue"]'
           default-labels: '["! not seen !"]'
