@@ -1,7 +1,7 @@
 name: Labeling new comment to issue
 on:
-  issue_comment:
-    types: [created, edited]
+  issues:
+      types: ['reopened']
 jobs:
   build:
     runs-on: ubuntu-latest
