@@ -1,7 +1,7 @@
 name: Labeling new issue
 on:
   issues:
-      types: ['opened', 'edited']
+      types: [opened, edited, reopened]
 jobs:
   build:
     runs-on: ubuntu-latest
